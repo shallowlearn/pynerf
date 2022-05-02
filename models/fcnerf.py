@@ -10,7 +10,6 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import torch
 import torch.nn as nn
-import yaml
 
 class FCNerf(nn.Module):
     '''
@@ -18,7 +17,7 @@ class FCNerf(nn.Module):
     Reference - "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis"
                 Fig. 7 on Page 18
     '''
-    def __init__(self, Lx = 10, Ld= 4, device=None):
+    def __init__(self, Lx=10, Ld=4, device=None):
         super().__init__()
         if device is None:
             if torch.cuda.is_available():
@@ -82,7 +81,6 @@ class FCNerf(nn.Module):
         self.final_fclayer = nn.Sequential(*final_fclayer)
 
         return
-
 
     def gamma(self, p, L=10):
         '''
