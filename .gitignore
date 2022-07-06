@@ -131,3 +131,4 @@ dmypy.json
 # Bharath
 *.pdf
 data/
+tasks/
