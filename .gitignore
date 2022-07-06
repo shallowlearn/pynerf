@@ -132,3 +132,4 @@ dmypy.json
 *.pdf
 data/
 tasks/
+launch_interactive.sh
