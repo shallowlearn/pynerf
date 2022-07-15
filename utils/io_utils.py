@@ -27,10 +27,10 @@ def read_json(f):
         sys.exit(1)
         return
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='')
-    #parser.add_argument('-', '--', required=False, type=str, default=None, help='')
-    #parser.add_argument('-', '--', action='store_true', help='')
- 
-    args = parser.parse_args()
-    main(args)
+# if __name__ == "__main__":
+#     parser = argparse.ArgumentParser(description='')
+#     #parser.add_argument('-', '--', required=False, type=str, default=None, help='')
+#     #parser.add_argument('-', '--', action='store_true', help='')
+#
+#     args = parser.parse_args()
+#     main(args)
