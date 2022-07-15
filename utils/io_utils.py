@@ -49,6 +49,29 @@ def doesfileexist(f, stop=False):
     else:
         return check
 
+def doesfolderexist(f, stop=False):
+    '''
+    A function that checks if a folder exists. If stop is True and it
+    does not exist, it will throw error and stop program
+    Parameters
+    ----------
+    f : Path to file
+    stop : If stop is True and it does not exist, it will throw error and stop program
+           If stop is False, it returns if folder exists or not
+
+    Returns
+    -------
+
+    check: If stop is True and it does not exist, it will throw error and stop program
+           If stop is False, it returns if folder exists or not
+    '''
+    check = os.path.isdir(f)
+    if not check and stop:
+        print("ERROR: {} not found".format(f))
+        sys.exit(1)
+    else:
+        return check
+
 # if __name__ == "__main__":
 #     parser = argparse.ArgumentParser(description='')
 #     #parser.add_argument('-', '--', required=False, type=str, default=None, help='')
