@@ -5,7 +5,6 @@ Author: Bharath Comandur
 import numpy as np
 import os
 import sys
-import argparse
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import json
@@ -26,6 +25,29 @@ def read_json(f):
         print("ERROR: {} NOT FOUND]n".format(f))
         sys.exit(1)
         return
+
+def doesfileexist(f, stop=False):
+    '''
+    A function that checks if a file exists. If stop is True and it
+    does not exist, it will throw error and stop program
+    Parameters
+    ----------
+    f : Path to file
+    stop : If stop is True and it does not exist, it will throw error and stop program
+           If stop is False, it returns if file exists or not
+
+    Returns
+    -------
+
+    check: If stop is True and it does not exist, it will throw error and stop program
+           If stop is False, it returns if file exists or not
+    '''
+    check = os.path.isfile(f)
+    if not check and stop:
+        print("ERROR: {} not found".format(f))
+        sys.exit(1)
+    else:
+        return check
 
 # if __name__ == "__main__":
 #     parser = argparse.ArgumentParser(description='')
